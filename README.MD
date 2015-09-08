@@ -1,4 +1,4 @@
-# Installation & Setup
+# Installation & Setup [![Build Status](https://travis-ci.org/2brosdevelopment/repository-pattern.svg?branch=master)](https://travis-ci.org/2brosdevelopment/repository-pattern)
 
 ## Composer
 You can install this package via <a href="http://getcomposer.org">Composer</a> by running the command: `composer require "two_bros/repository-pattern:~1.0"`.
