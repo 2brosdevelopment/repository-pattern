@@ -32,10 +32,10 @@ you will know exactly what functionality you will need to replicate.
 ### create( array $attributes )
     Will create a model from an array of attributes, and return the created model.
     
-#### update( integer $id, array $attributes )
+### update( integer $id, array $attributes )
     Will update a model using an id to locate and with an array of attributes, and return the updated model. 
 
-#### destroy( integer $id )
+### destroy( integer $id )
     Will destroy a model using an id to locate the model, and will return a 1 for the count of successfully deleted 
     models.
     
