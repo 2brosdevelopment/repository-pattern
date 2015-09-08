@@ -7,9 +7,16 @@
     class Role extends Model
     {
 
+        /**
+         * The attributes that are mass assignable.
+         *
+         * @var array
+         */
+        protected $guarded = [ ];
+
         public function user()
         {
 
-            return $this->hasOne( 'User', 'role_id' );
+            return $this->hasOne( 'TwoBros\RepositoryPattern\Tests\User', 'role_id' );
         }
     }

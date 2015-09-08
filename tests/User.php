@@ -29,7 +29,7 @@
          *
          * @var array
          */
-        protected $fillable = [ 'name', 'email', 'password' ];
+        protected $guarded = [ ];
 
         /**
          * The attributes excluded from the model's JSON form.
@@ -41,6 +41,6 @@
         public function role()
         {
 
-            return $this->belongsTo( 'Role', 'role_id' );
+            return $this->belongsTo( 'TwoBros\RepositoryPattern\Tests\Role', 'role_id' );
         }
     }
