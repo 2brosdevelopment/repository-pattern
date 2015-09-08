@@ -1,0 +1,34 @@
+{
+  "name": "two-bros/repository-pattern",
+  "autoload": {
+    "psr-4": {
+      "TwoBros\\RepositoryPattern\\": "src/"
+    }
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "laravel",
+    "validation"
+  ],
+  "authors": [
+    {
+      "name": "Vincent Sposato",
+      "email": "vsposato@sposatoenterprises.com"
+    },
+    {
+      "name": "John Sposato",
+      "email": "jsposato@sposatoenterprises.com"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "4.*",
+    "fzaninotto/faker": "~1.4",
+    "mockery/mockery": "0.9.*",
+    "orchestra/testbench": "~3.0"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TwoBros\\RepositoryPattern\\Tests\\": "tests/"
+    }
+  }
+}
