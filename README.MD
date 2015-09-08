@@ -29,41 +29,41 @@ specific repository that you created. Each repository should have its own interf
 any domain specific functionality is built under contract. This will make sure that if you need to change ORMs, then 
 you will know exactly what functionality you will need to replicate.
 
-## create( array $attributes )
+### create( array $attributes )
     Will create a model from an array of attributes, and return the created model.
     
-## update( integer $id, array $attributes )
+#### update( integer $id, array $attributes )
     Will update a model using an id to locate and with an array of attributes, and return the updated model. 
 
-## destroy( integer $id )
+#### destroy( integer $id )
     Will destroy a model using an id to locate the model, and will return a 1 for the count of successfully deleted 
     models.
     
-## all( array $columns = ['*'] )
+### all( array $columns = ['*'] )
     Will return an Eloquent collection object with the columns requested, or all columns by default.
     
-## getById( integer $id, array $columns = ['*'], array $with = [] )
+### getById( integer $id, array $columns = ['*'], array $with = [] )
     Will return a model with the columns requested and adding any relations requested. All columns are returned by default,
     and no relations.
     
-## getByPage( integer $page = 1, integer $limit = 10, array $with = [] )
+### getByPage( integer $page = 1, integer $limit = 10, array $with = [] )
     Will return a StdClass object that can be used in a Laravel Pagination object. It takes the page number, per page 
     limit, and an array of relations that you want to include. The page defaults to 1 with 10 items per page, and no 
     added relations. The return object will have an items array that includes an Eloquent collection object, and a 
     totalItems property that will contain the count of total items in the database.
     
-## getFirstBy( string $key, string $value, array $with = [] )
+### getFirstBy( string $key, string $value, array $with = [] )
     Will return the first model from the database that contains the value for the selected column, and including any 
     relations you decide to load. 
 
-## getManyBy( string $key, string $value, array $with = [] )
+### getManyBy( string $key, string $value, array $with = [] )
     Will return an Eloquent collection object from the database that contains the value for the selected column, and including any 
     relations you decide to load. 
 
-## has( string $relation, array $with = [] )
+### has( string $relation, array $with = [] )
     Will return an Eloquent collection object that has a specific relationship, and loading the array of relations provided.
 
-## make( array $with = [] )
+### make( array $with = [] )
     Will return a model object with the array of relations loaded. This is more of an intermediary to an actual data return, 
     and is used by any of the other methods that include loaded relations.
 
