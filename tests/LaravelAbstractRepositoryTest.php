@@ -170,6 +170,37 @@
                 "Attempting to find the destroyed user, which shouldn't return anything - returned something!" );
         }
 
+        public function testDestroyArrayOfIds()
+        {
+
+            $newUser  = User::create( [
+                'name'     => 'Vincent Tester',
+                'role_id'  => $this->roleModel->id,
+                'email'    => 'test5@example.com',
+                'password' => Hash::make( 'Password' )
+            ] );
+            $newUser2 = User::create( [
+                'name'     => 'Vincent Tester 2',
+                'role_id'  => $this->roleModel->id,
+                'email'    => 'test77@example.com',
+                'password' => Hash::make( 'Password' )
+            ] );
+            $idList   = [ $newUser->id, $newUser2->id ];
+
+            $result = $this->userRepository->destroy( $idList );
+            $this->assertEquals( 2, $result,
+                "destroy should return the count of 2, since I was deleting a single object - it didn't!" );
+
+            $findResult = User::find( $newUser->id );
+            $this->assertNull( $findResult,
+                "Attempting to find the destroyed user, which shouldn't return anything - returned something!" );
+
+            $findResult2 = User::find( $newUser2->id );
+            $this->assertNull( $findResult2,
+                "Attempting to find the destroyed user, which shouldn't return anything - returned something!" );
+
+        }
+
         /**
          * testUpdate
          *

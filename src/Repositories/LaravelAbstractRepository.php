@@ -63,7 +63,9 @@
         public function destroy( $ids )
         {
 
-            return $this->model->destroy( [ $ids ] );
+            $idList = is_array( $ids ) ? $ids : [ $ids ];
+
+            return $this->model->destroy( $idList );
         }
 
         /**
